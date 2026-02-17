@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAPISSERIE MOHSINE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --primary:#A0522D;
+  --secondary:#FAEBD7;
+  --accent:#8B4513;
+  --text:#2F4F4F;
+  --white:#fff;
+  --shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+body{
+  font-family:'Raleway',sans-serif;
+  background:var(--secondary);
+  color:var(--text);
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  background:var(--white);
+  box-shadow:var(--shadow);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.logo i{
+  font-size:2rem;
+  color:var(--primary);
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+.mobile-menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  font-size:1.6rem;
+  color:var(--primary);
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:400px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  margin-bottom:70px;
+  overflow:hidden;
+}
+
+.hero img{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-1;
+  filter:brightness(0.6);
+}
+
+.hero h1,
+.hero p{
+  color:white;
+}
+
+/* TITLES */
+.section-title h2{
+  font-size:2.4rem;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-bottom:80px;
+}
+
+.service-card{
+  background:var(--white);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.service-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.service-content{
+  padding:25px;
+  text-align:center;
+}
+
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-bottom:80px;
+}
+
+.gallery-item img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+/* ABOUT */
+.about{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:80px;
+}
+
+.about-img{
+  flex:1;
+}
+
+.about-img img{
+  width:100%;
+  min-height:300px;
+  object-fit:cover;
+}
+
+.about-content{
+  flex:1;
+}
+
+/* CONTACT */
+.contact{
+  background:var(--accent);
+  color:var(--white);
+  padding:80px 0;
+}
+
+.contact-container{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.contact-info,
+.contact-form{
+  flex:1;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--accent);
+  color:var(--white);
+  padding:40px 0;
+  text-align:center;
+}
+
+@media(max-width:768px){
+  nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--white);
+    padding:20px;
+    box-shadow:var(--shadow);
+  }
+  
+  nav.active{
+    display:block;
+  }
+  
+  nav ul{
+    flex-direction:column;
+    gap:15px;
+  }
+  
+  .mobile-menu-btn{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-container">
+    <div class="logo"><i class="fas fa-rug"></i></div>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <h1>Bienvenue chez TAPISSERIE MOHSINE</h1>
+  <p>Qualité et confort pour votre intérieur à Marrakech</p>
+  <img src="hero.jpg" alt="Tapisserie Mohsine - Hero">
+</section>
+
+<!-- SERVICES -->
+<section class="container" id="services">
+  <div class="section-title"><h2>Nos Services</h2></div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="service1.jpg" alt="Tapisserie Murale">
+      <div class="service-content"><h3>Tapisserie Murale</h3></div>
+    </div>
+
+    <div class="service-card">
+      <img src="service2.jpg" alt="Rénovation de Sièges">
+      <div class="service-content"><h3>Rénovation de Sièges</h3></div>
+    </div>
+
+    <div class="service-card">
+      <img src="service3.jpg" alt="Décoration sur Mesure">
+      <div class="service-content"><h3>Décoration sur Mesure</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="container" id="gallery">
+  <div class="section-title"><h2>Gallery</h2></div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery Image 1"></div>
+    <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery Image 2"></div>
+    <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery Image 3"></div>
+    <div class="gallery-item"><img src="gallery4.jpg" alt="Gallery Image 4"></div>
+    <div class="gallery-item"><img src="gallery5.jpg" alt="Gallery Image 5"></div>
+    <div class="gallery-item"><img src="gallery6.jpg" alt="Gallery Image 6"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="container about" id="apropos">
+  <div class="about-img">
+    <img src="about.jpg" alt="À propos de Tapisserie Mohsine">
+  </div>
+
+  <div class="about-content">
+    <h2>À propos</h2>
+    <p>
+      Chez TAPISSERIE MOHSINE, nous offrons des services de tapisserie
+      de qualité à Marrakech, combinant élégance, confort et savoir-faire artisanal.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h3>Coordonnées</h3>
+      <p>Téléphone : +212 712-449349</p>
+      <p>Adresse : JWFG+8Q3 Tadili Rahal, Marrakech 40150</p>
+
+      <iframe src="https://www.google.com/maps?q=JWFG+8Q3 Tadili Rahal, Marrakech 40150&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <p style="margin-top:15px;">
+        <a href="https://wa.me/212712449349" target="_blank" rel="noopener noreferrer"
+        style="background:#25D366;color:white;padding:12px 20px;
+        display:inline-block;border-radius:6px;text-decoration:none;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Tapisserie Mohsine</p>
+</footer>
+
+<script>
+  // Mobile menu toggle functionality
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mainNav = document.getElementById('main-nav');
+
+  mobileMenuBtn.addEventListener('click', function() {
+    mainNav.classList.toggle('active');
+    
+    // Toggle icon between bars and times
+    const icon = this.querySelector('i');
+    if (mainNav.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      mainNav.classList.remove('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+</script>
+
+</body>
+</html>
